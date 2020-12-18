@@ -37,8 +37,8 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      width: 100,
+      height: 250,
+      width: 250,
       decoration: BoxDecoration(
         color: Colors.blue[50].withOpacity(0.3),
         borderRadius: BorderRadius.circular(10),
@@ -55,7 +55,7 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
           return Text(
             _ctrl.value.floor().toString(),
             style: Theme.of(context).primaryTextTheme.headline3.copyWith(
-                  fontSize: 40,
+                  fontSize: 150,
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.italic,
                   color: Theme.of(context).accentColor,

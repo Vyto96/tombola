@@ -13,7 +13,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/natale_bg_1920x1080.png"),
+            fit: BoxFit.fill,
+          ),
+        ),
         child: SingleChildScrollView(
           child: BootstrapContainer(
             fluid: true,
@@ -23,13 +29,9 @@ class HomeScreen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height,
                 children: [
                   BootstrapCol(
-                    sizes: 'col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4',
+                    sizes: 'col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12',
                     child: Header(),
-                  ),
-                  BootstrapCol(
-                    sizes: 'col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 ',
-                    child: Table(),
-                  ),
+                  )
                 ],
               ),
             ],
@@ -80,22 +82,12 @@ class _HeaderState extends State<Header> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            'Tombola',
-            style: Theme.of(context)
-                .primaryTextTheme
-                .headline1
-                .copyWith(fontSize: 50),
-          ),
-          Text(
-            'Tombola or Housie number Generator ',
-            style: Theme.of(context).primaryTextTheme.bodyText2,
-          ),
-          SizedBox(height: 20),
+          SizedBox(height: 300),
           AnimatedCounterWidget(
             init: (c) => _counterAniContrl = c,
           ),
           Row(
+
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -120,7 +112,7 @@ class _HeaderState extends State<Header> {
             ],
           ),
           Container(
-            height: 80,
+            height: 100,
             child: BlocBuilder<GeneratorBloc, GeneratorState>(
               builder: (context, state) {
                 return PreviousNumbersRow(
@@ -129,8 +121,7 @@ class _HeaderState extends State<Header> {
                 );
               },
             ),
-          ),
-          AboutPage()
+          )
         ],
       ),
     );

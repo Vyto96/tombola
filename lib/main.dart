@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return BlocProvider<GeneratorBloc>(
       create: (_) => GeneratorBloc(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Tombola',
         theme: getLightTheme(context),
         darkTheme: getDarkTheme(context),
@@ -56,7 +57,7 @@ ThemeData getLightTheme(BuildContext context) {
   return ThemeData(
     primarySwatch: Colors.green,
     primaryColor: Colors.white,
-    backgroundColor: Color(0xffF1F5FB),
+    backgroundColor: Color(0xffF1FFFF),
     indicatorColor: Color(0xffCBDCF8),
     buttonColor: Color(0xffF1F5FB),
     hintColor: Color(0xffEECED3),
