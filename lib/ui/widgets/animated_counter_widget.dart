@@ -47,6 +47,7 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
           width: 1,
         ),
       ),
+      margin: const EdgeInsets.only(top:180),
       padding: const EdgeInsets.all(10),
       alignment: Alignment.center,
       child: AnimatedBuilder(

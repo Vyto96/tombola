@@ -7,7 +7,7 @@ import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import '../../../blocs/generator_bloc/generator_bloc.dart';
 import '../../widgets/animated_counter_widget.dart';
 import '../../widgets/previous_number_row_widget.dart';
-import 'components/about_page.dart';
+//import 'components/about_page.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -82,7 +82,6 @@ class _HeaderState extends State<Header> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height: 300),
           AnimatedCounterWidget(
             init: (c) => _counterAniContrl = c,
           ),
