@@ -3,6 +3,7 @@ library blocs.generator_bloc;
 import 'dart:math';
 
 import 'package:bloc/bloc.dart';
+import '../../constants/constants.dart';
 
 part 'generator_state.dart';
 part 'generator_event.dart';
@@ -23,10 +24,10 @@ class GeneratorBloc extends Bloc<GeneratorEvent, GeneratorState> {
 
   Stream<GeneratorState> _mapGenerateEventToState() async* {
     try {
-      if (_generatedNumbers.length >= 90) return;
+      if (_generatedNumbers.length >= NAMES.length) return;
       int randomValue = _generateRandom();
       while (_generatedNumbers.contains(randomValue) &&
-          _generatedNumbers.length < 90) {
+          _generatedNumbers.length < NAMES.length) {
         randomValue = _generateRandom();
       }
       _generatedNumbers.add(randomValue);
@@ -46,9 +47,9 @@ class GeneratorBloc extends Bloc<GeneratorEvent, GeneratorState> {
   }
 
   int _generateRandom() {
-    // Generatos random value between 1 to 90
+    // Generatos random value between 1 to NAMES.length
     // both min and max values are inclusive
     // logic obtained from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Examples
-    return (Random().nextDouble() * (90 - 1 + 1) + 1).floor();
+    return (Random().nextDouble() * (NAMES.length)).floor();
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../constants/constants.dart';
 
 class AnimatedCounterWidget extends StatefulWidget {
   final void Function(AnimationController controller) init;
@@ -21,7 +22,7 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
     _ctrl = AnimationController(
       vsync: this,
       lowerBound: 0,
-      upperBound: 90,
+      upperBound: NAMES.length.toDouble(),
       duration: const Duration(milliseconds: 1000),
     );
     if (widget.init != null) {
@@ -36,15 +37,16 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
 
   @override
   Widget build(BuildContext context) {
+
+
     return Container(
-      height: 250,
-      width: 250,
+      height: 300,
+      width: 500,
       decoration: BoxDecoration(
-        color: Colors.blue[50].withOpacity(0.3),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
-          color: Theme.of(context).accentColor,
-          width: 1,
+          color: Color.fromRGBO(91, 163, 141, 1),
+          width: 2,
         ),
       ),
       margin: const EdgeInsets.only(top:180),
@@ -54,12 +56,12 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
         animation: _ctrl,
         builder: (context, child) {
           return Text(
-            _ctrl.value.floor().toString(),
+            NAMES[_ctrl.value.floor()],
             style: Theme.of(context).primaryTextTheme.headline3.copyWith(
-                  fontSize: 150,
+                  fontSize: 100,
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.italic,
-                  color: Theme.of(context).accentColor,
+                  color: Color.fromRGBO(91, 163, 141, 1)
                 ),
           );
         },

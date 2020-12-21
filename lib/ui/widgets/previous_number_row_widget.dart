@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../constants/constants.dart';
 
 class PreviousNumbersRow extends StatelessWidget {
   final Set<int> generatedValues;
@@ -10,6 +11,7 @@ class PreviousNumbersRow extends StatelessWidget {
     this.controller,
   }) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -19,7 +21,7 @@ class PreviousNumbersRow extends StatelessWidget {
       reverse: false,
       itemBuilder: (context, index) {
         return PreviousItem(
-          value: generatedValues.elementAt(index),
+          value: NAMES[generatedValues.elementAt(index)] ,
         );
       },
     );
@@ -27,30 +29,29 @@ class PreviousNumbersRow extends StatelessWidget {
 }
 
 class PreviousItem extends StatelessWidget {
-  final int value;
+  final String value;
 
   const PreviousItem({Key key, this.value}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 60,
+      width: 200,
       margin: const EdgeInsets.all(10),
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: Colors.blue[50].withOpacity(0.5),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
-          color: Colors.green,
-          width: 1,
+          color: Color.fromRGBO(91, 163, 141, 1),
+          width: 2,
         ),
       ),
       padding: const EdgeInsets.all(10),
       child: Text(
         '$value',
         style: TextStyle(
-          fontSize: 18,
+          fontSize: 30,
           fontWeight: FontWeight.w400,
-          color: Theme.of(context).accentColor,
+          color: Color.fromRGBO(91, 163, 141, 1)
         ),
       ),
     );
