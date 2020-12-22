@@ -41,7 +41,7 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
 
     return Container(
       height: 300,
-      width: 500,
+      width: 700,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
@@ -58,7 +58,7 @@ class _AnimatedCounterWidgetState extends State<AnimatedCounterWidget>
           return Text(
             NAMES[_ctrl.value.floor()],
             style: Theme.of(context).primaryTextTheme.headline3.copyWith(
-                  fontSize: 100,
+                  fontSize: 80,
                   fontWeight: FontWeight.w700,
                   fontStyle: FontStyle.italic,
                   color: Color.fromRGBO(91, 163, 141, 1)

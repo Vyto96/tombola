@@ -59,7 +59,7 @@ class _HeaderState extends State<Header> {
     _generatorBloc.listen((state) {
       _counterAniContrl?.animateTo(state.value.toDouble());
       _scrollCtrl?.animateTo(
-        (70 + _scrollCtrl.position.maxScrollExtent).toDouble(),
+        (200 + _scrollCtrl.position.maxScrollExtent).toDouble(),
         duration: Duration(milliseconds: 1000),
         curve: Curves.decelerate,
       );

@@ -49,7 +49,7 @@ class PreviousItem extends StatelessWidget {
       child: Text(
         '$value',
         style: TextStyle(
-          fontSize: 30,
+          fontSize: 20,
           fontWeight: FontWeight.w400,
           color: Color.fromRGBO(91, 163, 141, 1)
         ),

@@ -3,6 +3,84 @@ const PROJECT_REPO_URL = 'https://github.com/RatakondalaArun/tombola';
 const PROJECT_ISSUES_URL = 'https://github.com/RatakondalaArun/tombola/issues';
 const APP_ASSET_ICON_PATH = 'assets/icons/icon.png';
 const NAMES = [
-  'vyto', 'alan', 'bob', 'christian', 'daniel',
-  'elio'
+  "ALESSIA ALBRIZIO",
+  "ARTURO BARBATO",
+  "ALEXANDRU BUHOCI",
+  "ANDREA CAPALDO",
+  "ANDREA ESPOSITO",
+  "ANTONIO MUGGIANU",
+  "ALFREDO PELLEGRINO",
+  "ANTONIO SESSA",
+  "ANTONIO SICIGNANO",
+  "ALESSANDRO BRACCI",
+  "ALESSANDRO NIGLIO",
+  "ALESSIO ZOCCOLI",
+  "ANDREA BISACCIA",
+  "ANNA PASTORE",
+  "CLAUDIO ORTENZI",
+  "CINZIA IMBIMBO",
+  "DANIELE BALLARINI",
+  "DAMIANO CADDEO",
+  "DAVIDE DIONISI",
+  "DAVIDE FRANCO",
+  "DANIELE SUTERA",
+  "DANIELA COTIMBO",
+  "DAVIDE GERVASIO",
+  "EDOARDO BUONI",
+  "FRANCESCO ALBANESE",
+  "FEDERICA AVELLA",
+  "FEDERICO GENTILE",
+  "FRANCESCA BUFANO",
+  "GUIDO BRESCIA",
+  "GIONATAN FIONDELLA",
+  "GIORGIO MOTTIRONI",
+  "GIUSEPPE PERILLO",
+  "GIOVANNI VALENTINO",
+  "GIUSEPPINA PASTORE",
+  "JOSEPH FEENER",
+  "LIVIA BOCHICCHIO",
+  "LUCIA DEGAIS",
+  "LORENZO GARGIULLO",
+  "LORENZO GIACOMINI",
+  "LOUIS TARANTINO",
+  "MARINA ANGELUCCI",
+  "MAURIZIO FIUMARA",
+  "MAURIZIO FORMICOLA",
+  "MARCO ROSSI",
+  "MIRKO SUTERA",
+  "MARTINO BELLINCAMPI",
+  "PAOLO BUCCIGROSSI",
+  "ROCCO LAGROTTERIA",
+  "SALVATORE CATERINO",
+  "SIMONE DERIU",
+  "TIZIANA SPAGNA",
+  "VALERIA MINCIARELLI",
+  "VINCENZO NAPOLITANO",
+  "VALENTINA SCHIFANO",
+  "VALERIO PAPI",
+  "VINCENZO GIOIA",
+  "COSTABILE GIGANTINO",
+  "DAVIDE ROMANO",
+  "LUIGI DI MAURO",
+  "MAURIZIO DE LUCA",
+  "MASSIMO CORTELLINI",
+  "NUNZIA FALANGA",
+  "CHRISTIAN SANNINO",
+  "VITTORIO ZAVINO"
+
+// DA ESCLUDERE:
+//   Adamo Alfredo
+// - Adamo Luca
+// - Adamo Noemi
+// - Adamo Silvia
+// - Capogrosso Andrea --
+// - D'Ambrosio Marco
+// - De Carlo Niccolò
+// - Iannello Gianfranco
+// - Narduzzi Daniele --
+// - Pennacchietti Marco --
+// - Romano Ciro
+// - Rossi Gaetano
+// - Stefanutti Mario
+
 ];
